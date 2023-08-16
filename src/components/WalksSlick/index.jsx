@@ -10,11 +10,13 @@ import language from '../../utils/language.json'
 
 export default function FolkGamesSlick() {
 
+  const lang = useSelector(state => state.language)
+
     const [sayils, setSayils] = useState([])
-    const lang = useSelector(state => state.language)
 
     useEffect(() => {
         getSayil(sayil, (response) => {
+          console.log(response.data);
             setSayils(response.data)
         }, (error) => {
             console.log(error)
@@ -22,66 +24,68 @@ export default function FolkGamesSlick() {
     }, [])
 
     const settings = {
-      dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 2000,
-      cssEase: "linear",
-      arrows: false,
-      responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
+        dots: true,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2000,
+        cssEase: "linear",
+        arrows: false,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
             }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-  };
+          ]
+    };
 
     return (
         <div className="walks-slick">
-        {
-          sayils.length >= 4 ?
-            <Slider {...settings}>
-              {
-                  sayils.map((elem, index) => {
-                      return (
-                          <WalksSlickItem key={index}>
-                              <WalksSlickImageWrapper>
-                                  <img src={elem.image} alt="Uzbekistan_Airways" />
-                              </WalksSlickImageWrapper>
-                              <WalksSlickTitle>{elem[`name_${lang}`]}</WalksSlickTitle>
-                              <WalksSlickInfo>
-                                {elem[`description_${lang}`].slice(0,150)} ...
-                              </WalksSlickInfo>
-                              <WalksLink to={'/info'} state={elem}>{language.more[lang]}</WalksLink>
-                          </WalksSlickItem>
-                      )
-                  })
-              }
-          </Slider>:<></>
-        }
+            {
+                sayils.length > 4  ? 
+                <Slider {...settings}>
+                {
+                    sayils.map((elem, index) => {
+                        return (
+                            <WalksSlickItem key={index}>
+                                <WalksSlickImageWrapper>
+                                    <img src={elem.image || elem.photo} alt="Uzbekistan_Airways" />
+                                </WalksSlickImageWrapper>
+                                <WalksSlickTitle>{elem[`name_${lang}`]}</WalksSlickTitle>
+                                <WalksSlickInfo>
+                                    {elem[`description_${lang}`]?.slice(0,150)} ...
+                                </WalksSlickInfo>
+                                <WalksLink to={'/info'} state={elem}>{language.more[lang]}</WalksLink>
+                            </WalksSlickItem>
+                        )
+            
+                    })
+                }
+                </Slider>
+                :<></>
+            }
         </div>
     );
 }

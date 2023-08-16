@@ -18,7 +18,7 @@ export default function EventsWithTable() {
             <EventsWithTableTitle><Title>{language.SportsEvents[lang]}</Title></EventsWithTableTitle>
               <CulturalEvents title={'/event-second/'}/>
             <EventsWithTableTitle><Title>{language.NationalFolk[lang]}</Title></EventsWithTableTitle>
-              <CulturalEvents title={'/event-third/'}/>
+              <CulturalEvents title={'/milliy/'}/>
         </MainWrapper>
     </EventsWithTableWrapper>
   )

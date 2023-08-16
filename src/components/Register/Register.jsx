@@ -82,11 +82,11 @@ export default function Register() {
             <RegisterRightInputs>
               <div>
                 <p style={{ margin: '0 0 10px 0' }}>{language.Name[lang]}</p>
-                <TextField sx={{width: '300px'}} id="outlined-basic" label={`${language.Name[lang]}`} variant="outlined" onChange={(event) => { setName1(event.target.value) }}/>
+                <TextField sx={{width: '300px'}} id="outlined-basic" label={`${language.Name[lang]}`} variant="outlined" onChange={(event) => { setName1(event?.target?.value) }}/>
               </div>
               <div>
                 <p style={{ margin: '0 0 10px 0' }}>{language.Surname[lang]}</p>
-                <TextField sx={{width: '300px'}} id="outlined-basic" label={`${language.Surname[lang]}`} variant="outlined" onChange={(event) => { setName2(event.target.value) }}/>
+                <TextField sx={{width: '300px'}} id="outlined-basic" label={`${language.Surname[lang]}`} variant="outlined" onChange={(event) => { setName2(event?.target?.value) }}/>
               </div>
             </RegisterRightInputs>
             <RegisterRightInputs>

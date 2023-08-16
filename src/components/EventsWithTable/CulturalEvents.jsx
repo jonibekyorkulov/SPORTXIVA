@@ -27,11 +27,11 @@ export default function CulturalEvents(props) {
             return (
                <NewsWalksSlickItem key={index}>
                 <NewsWalksSlickImageWrapper>
-                  <img src={item.image} alt="Uzbekistan_Airways" />
+                  <img src={item.image ?? item.photo} alt="Uzbekistan_Airways" />
                 </NewsWalksSlickImageWrapper>
                 <NewsWalksSlickTitle>{item[`name_${lang}`]}</NewsWalksSlickTitle>
                 <NewsWalksSlickInfo>
-                  {item[`description_${lang}`].slice(0,150)}
+                  {item[`description_${lang}`]?.slice(0,150)}
                 </NewsWalksSlickInfo>
                 <NewsWalksLink to={'/info'} state={item}>{listlanguage.more[lang]}</NewsWalksLink>
               </NewsWalksSlickItem>

@@ -70,11 +70,11 @@ export default function FolkGamesSlick() {
                         return (
                             <WalksSlickItem key={index}>
                                 <WalksSlickImageWrapper>
-                                    <img src={elem.image} alt="Uzbekistan_Airways" />
+                                    <img src={elem.photo} alt="Uzbekistan_Airways" />
                                 </WalksSlickImageWrapper>
                                 <WalksSlickTitle>{elem[`name_${lang}`]}</WalksSlickTitle>
                                 <WalksSlickInfo>
-                                    {elem[`description_${lang}`].slice(0,150)} ...
+                                    {elem[`description_${lang}`]?.slice(0,150)} ...
                                 </WalksSlickInfo>
                                 <WalksLink to={'/info'} state={elem}>{language.more[lang]}</WalksLink>
                             </WalksSlickItem>

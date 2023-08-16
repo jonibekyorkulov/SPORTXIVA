@@ -29,11 +29,13 @@ export default function News() {
         </RegisterTitle>
         <NewsContainer>
           <NewsImgCard >
-            <img src={News[News.length-1]?.image} alt="" />
+            {
+              News.length > 0 && <img src={News[News.length-1]?.image} alt="" />
+            }
           </NewsImgCard>
           <NewsRight>
-            <h1>{News[News.length-1]?.name}</h1>
-            <p>{News[News.length-1]?.description}</p>
+            <h1>{News[News.length-1]?.[`name_${lang}`]}</h1>
+              <div style={{width: "600px", overflow: "hidden"}}>{News[News.length-1]?.[`description_${lang}`]}</div>
           </NewsRight>
         </NewsContainer>
 
@@ -45,9 +47,9 @@ export default function News() {
                   <NewsWalksSlickImageWrapper>
                     <img src={item?.image} alt="Uzbekistan_Airways" />
                   </NewsWalksSlickImageWrapper>
-                  <NewsWalksSlickTitle>{item?.name}</NewsWalksSlickTitle>
+                  <NewsWalksSlickTitle>{item?.[`name_${lang}`]}</NewsWalksSlickTitle>
                   <NewsWalksSlickInfo>
-                    {item?.description.slice(0,70)} ...
+                    {item?.[`description_${lang}`]?.slice(0,158)}...
                   </NewsWalksSlickInfo>
                   <NewsWalksLink to={`/info`} state={item}>{language.more[lang]}</NewsWalksLink>
                 </NewsWalksSlickItem>
