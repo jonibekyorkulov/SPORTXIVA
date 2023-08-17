@@ -44,7 +44,7 @@ export default function TableCountryMembers() {
     const [rows, setRows] = React.useState([])
 React.useEffect(() => {
     GuestsDataUrl(participant_count, (response) => {
-        console.log(response.data);
+        
         setRows(response.data)
     }, (error) => {
         console.log(error)

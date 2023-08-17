@@ -31,7 +31,7 @@ export default function DemonstrationSports() {
                     tablist.length > 0 && tablist.map((item, index) => {
                         return (
                             <DemonstrationSportsListItem className="animation-info" key={index}>
-                            <span>{item.id>9?item.id:`0${item.id}`}</span>
+                            {/* <span>{item.id>9?item.id:`0${item.id}`}</span> */}
                             <h5>{item[`name_${lang}`]}</h5>
                             <DemonstrationSportsImgWrapper className="animation-img">
                                 <img src={item.image} alt="ozbek-jang-sanati" />
