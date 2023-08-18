@@ -62,10 +62,10 @@ React.useEffect(() => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {rows.map((row, index) => (
             <StyledTableRow key={row.id}>
               <StyledTableCell component="th" scope="row">
-                {row.id}
+                {index + 1}
               </StyledTableCell>
               <StyledTableCell align="left">{row.full_name}</StyledTableCell>
               <StyledTableCell align="left">{row.date}</StyledTableCell>

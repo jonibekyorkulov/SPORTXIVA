@@ -5,7 +5,7 @@ export const VideoWelcomeWrapper = styled.div`
     display: block;
     /* margin: 0 -56px; */
     position: relative;
-    margin-top: 250px;
+    margin-top: 120px;
     @media (max-width: 560px){
         margin-top: 210px;
     }

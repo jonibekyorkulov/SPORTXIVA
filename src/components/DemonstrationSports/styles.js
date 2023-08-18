@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import bgi from '../../imgs/capa1.png'
+import bgi from '../../imgs/capa2.png'
 
 export const DemonstrationSportsWrapper = styled.div`
     background-image: url(${bgi});

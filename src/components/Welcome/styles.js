@@ -14,6 +14,7 @@ export const WelcomeWrapper = styled.div`
     flex-wrap: wrap;
     /* padding-top: 120px; */
     padding: 150px 0;
+    height: 100vh;
     @media (max-width: 800px) {
         padding: 50px 0;
     }
@@ -33,7 +34,7 @@ export const WelcomeContainer = styled.div`
 
 export const WelcomeInfo = styled.div`
     h1 {
-        color: ${props => props.theme.color.color1};
+        color: #fff;
         font-size: 56px;
         font-style: normal;
         font-weight: 700;

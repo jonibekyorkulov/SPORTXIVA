@@ -55,7 +55,7 @@
       "en": "View"
     },
     "Championships": {
-      "uz": "Jaxon chempionatlari",
+      "uz": "Jahon chempionatlari",
       "ru": "Чемпионаты мира",
       "en": "World Championships"
     },
@@ -273,5 +273,25 @@
       "uz": "Ayol",
       "ru": "Женщина",
       "en": "Female"
+    },
+    "Championships_detail_1": {
+      "uz": "Mas-restling",
+      "ru": "Мас-рестлинг",
+      "en": "Mas-wrestling"
+    },
+    "Championships_detail_2": {
+      "uz": "Bahodirlar o'yini va tosh ko'tarish",
+      "ru": "Игры богатирьов и гиревой спорт",
+      "en": "Games of athletes and kettlebell lifting"
+    },
+    "Championships_detail_3": {
+      "uz": "Belbog'li kurash",
+      "ru": "Борьба на поясах",
+      "en": "Belt wrestling"
+    },
+    "Championships_detail_4": {
+      "uz": "O'zbek jang san'ati",
+      "ru": "Узбекские боевые искусства",
+      "en": "Uzbek martial arts"
     }
 }

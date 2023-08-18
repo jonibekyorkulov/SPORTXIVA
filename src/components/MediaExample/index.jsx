@@ -7,7 +7,7 @@ export default function MediaExample({mediaUrl}) {
   if(mediaUrl == 1) return (
     <MediaPlayer
       src={require('../../media/document_5366152270134128241.mp4')}
-      poster={require('../../media/poster4.jpg')}
+      // poster={require('../../media/poster4.jpg')}
       controls
     >
       <MediaOutlet />
@@ -16,7 +16,7 @@ export default function MediaExample({mediaUrl}) {
   if(mediaUrl == 2) return (
     <MediaPlayer
       src={require('../../media/document_5366152270134128228.mp4')}
-      poster={require('../../media/post_bg2.png')}
+      // poster={require('../../media/post_bg2.png')}
       controls
     >
       <MediaOutlet />
@@ -25,7 +25,7 @@ export default function MediaExample({mediaUrl}) {
   if(mediaUrl == 3) return (
     <MediaPlayer
       src={require('../../media/1111.mp4')}
-      poster={require('../../media/video_post_img.jpg')}
+      // poster={require('../../media/video_post_img.jpg')}
       controls
     >
       <MediaOutlet />
@@ -34,7 +34,7 @@ export default function MediaExample({mediaUrl}) {
   if(mediaUrl == 4) return (
     <MediaPlayer
       src={require('../../media/document_5366152270134128252.mp4')}
-      poster={require('../../media/poster3.jpeg')}
+      // poster={require('../../media/poster3.jpeg')}
       controls
     >
       <MediaOutlet />
@@ -43,7 +43,7 @@ export default function MediaExample({mediaUrl}) {
   if(mediaUrl == 5) return (
     <MediaPlayer
       src={require('../../media/document_5366152270134128254.mp4')}
-      poster={require('../../media/poster2.jpeg')}
+      // poster={require('../../media/poster2.jpeg')}
       controls
     >
       <MediaOutlet />

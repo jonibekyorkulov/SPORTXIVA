@@ -35,7 +35,7 @@ export default function Header() {
         <HeaderWrapper type={headerType}>
             <MainWrapper>
                 <HeaderContainer>
-                        <img src={require('../../imgs/image1.png')} alt="logo" />
+                        <img src={require('../../imgs/image1.png')} alt="logo" width="240px" />
                     <MenuList open={openMenu}>
                         <MenuItem><MenuItemLink to="/">{language.home_page[lang]}</MenuItemLink></MenuItem>
                         <MenuItem><MenuItemLink to="news">{language.news_page[lang]}</MenuItemLink></MenuItem>
@@ -53,13 +53,13 @@ export default function Header() {
                         </TreeDots>
                     </LanguageDots>
                 </HeaderContainer>
-                <AddLogos>
+                {/* <AddLogos>
                     <Logos>
                         <img src={require('../../imgs/new_logo.jpg')} alt="logo" />
                         <img src={require('../../imgs/new_logo2.jpg')} alt="logo" />
                         <img src={require('../../imgs/removebg-preview2.png')} alt="logo" />
                     </Logos>
-                </AddLogos>
+                </AddLogos> */}
             </MainWrapper>
         </HeaderWrapper>
     )

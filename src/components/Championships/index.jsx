@@ -31,7 +31,7 @@ export default function Championships() {
                             <ChampionshipBlogInfo onMouseEnter={() => {setBgImage(1)}}>
                                 <h4>1</h4>
                                 <ChampionshipBlogInfoFooter className="championship-footer">
-                                    <h5>"Mas Restling"</h5>
+                                    <h5>{language.Championships_detail_1[lang]}</h5>
                                     <SportReg to="register">{language.Registr[lang]}</SportReg>
                                 </ChampionshipBlogInfoFooter>
                             </ChampionshipBlogInfo>
@@ -42,7 +42,7 @@ export default function Championships() {
                             <ChampionshipBlogInfo onMouseEnter={() => {setBgImage(2)}}>
                                 <h4>2</h4>
                                 <ChampionshipBlogInfoFooter className="championship-footer">
-                                    <h5>"Pahlovonlar bellashuvi"</h5>
+                                    <h5>{language.Championships_detail_2[lang]}</h5>
                                     <SportReg to="register">{language.Registr[lang]}</SportReg>
                                 </ChampionshipBlogInfoFooter>
                             </ChampionshipBlogInfo>
@@ -53,7 +53,7 @@ export default function Championships() {
                             <ChampionshipBlogInfo onMouseEnter={() => {setBgImage(3)}}>
                                 <h4>3</h4>
                                 <ChampionshipBlogInfoFooter className="championship-footer">
-                                    <h5>"Belbog'li kurash"</h5>
+                                    <h5>{language.Championships_detail_3[lang]}</h5>
                                     <SportReg to="register">{language.Registr[lang]}</SportReg>
                                 </ChampionshipBlogInfoFooter>
                             </ChampionshipBlogInfo>
@@ -64,7 +64,7 @@ export default function Championships() {
                             <ChampionshipBlogInfo onMouseEnter={() => {setBgImage(4)}}>
                                 <h4>4</h4>
                                 <ChampionshipBlogInfoFooter className="championship-footer">
-                                    <h5>"O'zbekiston jang san'ati"</h5>
+                                    <h5>{language.Championships_detail_4[lang]}</h5>
                                     <SportReg to="register">{language.Registr[lang]}</SportReg>
                                 </ChampionshipBlogInfoFooter>
                             </ChampionshipBlogInfo>
